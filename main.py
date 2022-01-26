@@ -30,24 +30,24 @@ def splitcont(cont):
 
 def sumfive(t_list):
   try:
-    cont_ahrt = len(t_list)//5      # 몫
-    cont_skajwl = len(t_list)%5     # 나머지
-    len_5 = []    # 리턴할 리스트
+    cont_ahrt = len(t_list)//10      # 몫
+    cont_skajwl = len(t_list)%10     # 나머지
+    len_10 = []    # 리턴할 리스트
 
     for i in range(cont_ahrt):
-        temp = t_list[i*5]+t_list[i*5+1]+t_list[i*5+2]+t_list[i*5+3]+t_list[i*5+4]
-        len_5.append(temp)
+        temp = t_list[i*10]+t_list[i*10+1]+t_list[i*10+2]+t_list[i*10+3]+t_list[i*10+4]
+        len_10.append(temp)
 
     if cont_skajwl != 0:
-      tt = len_5[-1]
+      tt = len_10[-1]
       for j in range(cont_skajwl):
-          tt = tt + t_list[(cont_ahrt-1)*5 + j]
-      del len_5[-1]
-      len_5.append(tt)
+          tt = tt + t_list[(cont_ahrt-1)*10 + j]
+      del len_10[-1]
+      len_10.append(tt)
   except:
-    return len_5
+    return len_10
   else:
-    return len_5
+    return len_10
 
 
 def useModel(content):
