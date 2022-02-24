@@ -7,7 +7,8 @@ class TotalSql():
     @staticmethod
     def findContent():
         cursor = SqlCon.Cursor()
-        query = str.format("select n_id, n_content from N_content")
+        query = str.format("select n_id, n_content from N_content where n_id > 26500 order by n_id")
+        #query = str.format("select n_id, n_content from N_content")
         try: 
             cursor.execute(query)
             row = cursor.fetchall()
