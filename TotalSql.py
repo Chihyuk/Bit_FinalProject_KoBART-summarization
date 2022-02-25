@@ -7,11 +7,16 @@ class TotalSql():
     @staticmethod
     def findContent(order="asc"):
         cursor = SqlCon.Cursor()
+<<<<<<< HEAD
         if order == "desc":             # 인자 값을 desc를 받으면 오름차순 정렬 시키기
             query = str.format("select n_id, n_content from N_content order by n_id desc")
         else:
             query = str.format("select n_id, n_content from N_content where n_id > 26500 order by n_id")
             #query = str.format("select n_id, n_content from N_content")
+=======
+        query = str.format("select n_id, n_content from N_content where n_id > 26500 order by n_id")
+        #query = str.format("select n_id, n_content from N_content")
+>>>>>>> 8eb897c93e9b5e6b1ddd327c0dd203f5abfa1f45
         try: 
             cursor.execute(query)
             row = cursor.fetchall()
